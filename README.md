@@ -4,13 +4,16 @@ An original responsive developer portfolio inspired by futuristic black-and-cyan
 
 ## Features
 - Neon cyan night mode and Matrix-green hacker day mode with cursor parallax, glowing trails and floating particles.
-- Interactive Google-inspired profile search section. Buttons open Google AI Mode search where supported. The panel is **not** an official Google product and does not receive live Google results inside the portfolio.
+- Google-inspired search panel answers common questions **locally from Vivek's own portfolio and official GitHub/LinkedIn identity**. External Google is a separately labeled optional link scoped with the distinct GitHub username `viveksahu1974`. The panel is **not** an official Google product and cannot control Google AI answers. This avoids misleading on-site results for unrelated people also named Vivek Sahu.
 - Five featured project **illustrations** in `assets/`, each clearly marked *illustrated preview*, not genuine screenshots.
 - Featured project GitHub source and demo links. TEJA AI links to a **sample UI preview** in `teja-demo/`; full AI inference needs a properly configured backend.
 - Public GitHub repository Auto-Sync and featured project carousel; incomplete repositories listed by name.
 - Separate internships, academic history, skills and contact.
 - Eleven certificate titles with **Google search links only** (not credential verification links).
 - Feedback form UI (requires Apps Script authorization and endpoint to send).
+
+## Identity / Search metadata
+`index.html` includes canonical URL, social profile links and a Person JSON-LD identity for `Vivek Sahu` at MSIT Delhi. Search engines may take time to index it and can still confuse people with the same name. The live answer panel is first-party rather than Google AI-generated.
 
 ## Hosting
 GitHub Pages: **Settings → Pages → Deploy from a branch → main → /(root)**.
