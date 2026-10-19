@@ -194,7 +194,7 @@ body:not(.night) .feedback select,body:not(.night) .feedback textarea,body:not(.
 @media(max-width:570px){.nav.nav-cyber .nav-social{display:none}.nav-cyber .connect-glow{padding:9px 10px;font-size:.75rem}.nav-cyber .cyber-brand{font-size:1.44rem}.nav-cyber .nav-actions{gap:6px}.nav-cyber .nav-links{right:8px}.hero h1{font-size:clamp(3.3rem,13vw,5rem)}.ai-dialog{padding:21px}.ai-input-line{flex-direction:column}.ai-dialog-top .google-g{font-size:2rem}.ai-dialog h2{font-size:1.3rem}.hero-query{font-size:.68rem}.hero-search-trigger{font-size:.83rem}.hero-search-trigger kbd{display:none}.contact-method strong{font-size:.83rem}.contact-display-inner{padding:29px 19px}}
 @media(prefers-reduced-motion:reduce){.digital-particles i,.pointer-halo,body:after{animation:none!important}.pointer-halo{display:none!important}}
 
-</style><link rel="stylesheet" href="./cyber-effects.css?v=20261019a"/></head><body><nav aria-label="Main navigation" class="nav nav-cyber" id="topNav">
+</style><link rel="stylesheet" href="./cyber-effects.css?v=20261019b"/></head><body><nav aria-label="Main navigation" class="nav nav-cyber" id="topNav">
 <a class="brand-mark cyber-brand" href="#home" aria-label="Vivek Sahu Home">&lt;VS /&gt;</a>
 <div class="nav-links" id="navLinks">
 <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#internships">Experience</a><a href="#projects">Projects</a><a href="#experience">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
@@ -392,4 +392,4 @@ document.querySelectorAll('[data-ai-q]').forEach(b=>b.addEventListener('click',(
 const halo=document.getElementById('pointerHalo');if(halo&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let x=0,y=0;document.addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;halo.style.transform='translate3d('+(x-25)+'px,'+(y-25)+'px,0)';halo.style.opacity='1'},{passive:true});document.addEventListener('pointerleave',()=>halo.style.opacity='0');}
 const mainLinks=[...document.querySelectorAll('.nav-links a[href^="#"]')];if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){mainLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));}},{rootMargin:'-15% 0px -60% 0px',threshold:0});document.querySelectorAll('header[id], main section[id]').forEach(el=>observer.observe(el));}
 })();
-</script><script src="./cyber-effects.js?v=20261019a" defer></script></body></html>
+</script><script src="./cyber-effects.js?v=20261019b" defer></script></body></html>
