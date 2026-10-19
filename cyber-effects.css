@@ -123,3 +123,13 @@ body:not(.night) #cyberModeLabel{background:#031c0af2}
 @media(max-width:800px){#cyberModeLabel{font-size:.55rem;padding:7px 10px;left:10px;bottom:9px}#mouseAura{opacity:.38;width:360px;height:360px;margin-left:-180px;margin-top:-180px}}
 @media(max-width:570px){#cyberModeLabel{display:none}.digital-particles i{box-shadow:0 0 10px rgba(var(--neon-rgb),.5)!important}}
 @media(prefers-reduced-motion:reduce){#cyberField{opacity:.22}.cursor-trail,#neonCursorCore{display:none!important}.nav-cyber .connect-glow,.hero .digital-particles i{animation:none!important}.hero .cyber-grid,.hero .digital-particles,.hero .hero-portrait{transition:none!important}}
+
+
+/* Final layering fix: do not let the old opaque sky hide reactive canvas. */
+.hero .sky,.night .hero .sky,body:not(.night) .hero .sky{background:transparent!important}
+.hero .sky:after,.night .hero .sky:after,body:not(.night) .hero .sky:after{background:transparent!important;pointer-events:none}
+.hero .hero-portrait{transform:translate3d(var(--hero-pointer-x,0px),var(--hero-pointer-y,0px),0)!important;transition:transform .25s cubic-bezier(.16,.68,.28,1)!important}
+#cyberField{z-index:0!important}
+#mouseAura{z-index:0!important}
+.hero{z-index:1!important}
+main{z-index:1!important}
