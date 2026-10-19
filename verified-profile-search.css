@@ -1,0 +1,12 @@
+/* Official profile answer panels — separate from the Google-inspired visual presentation. */
+.verified-profile-answer[hidden]{display:none!important}
+.verified-profile-answer{margin:15px 0 17px;padding:17px 20px;border-radius:16px;background:#eff8ff;color:#173b51;border:1px solid #b5dceb;box-shadow:0 7px 24px #0a315e12;font:400 .93rem/1.55 Arial,system-ui,sans-serif}
+.verified-profile-answer strong{display:block;color:#12577d;font-size:1.06rem;margin-bottom:9px}
+.verified-profile-answer p{font:inherit!important;color:#2c4a5e!important;margin:0 0 13px!important;line-height:1.65!important}
+.verified-profile-answer a{color:#165fb4!important;font-size:.9rem;font-weight:780;text-decoration:underline}
+.verified-profile-answer small{display:block;color:#526d80;margin-top:13px;line-height:1.4}
+.gai-questions button{display:flex;align-items:center;justify-content:space-between;width:100%;background:#f8fafb!important;border:1px solid #e4e7ec!important;border-radius:18px!important;color:#182b3c!important;font:550 1rem/1.45 Arial,system-ui,sans-serif!important;padding:16px 21px!important;gap:18px;text-align:left;cursor:pointer}
+.gai-questions button:hover{background:#edf6ff!important;border-color:#95ccea!important}
+.gai-questions button span:last-child{font-size:1.7rem!important;line-height:1}
+body:not(.night) .gai-questions button{background:#f8fafb!important;color:#182b3c!important}
+@media(max-width:620px){.verified-profile-answer{padding:13px 15px}.gai-questions button{font-size:.86rem!important;padding:12px 14px!important}}
