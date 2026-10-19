@@ -1,26 +1,30 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
-A responsive, original portfolio inspired by the futuristic black-and-cyan design language of the reference site. Branding and all personal content belong to **Vivek Sahu**.
+An original responsive developer portfolio inspired by futuristic black-and-cyan interfaces, with green hacker day mode, interactive cursor effects, 3D project cards and a Google Search-inspired profile panel.
 
-## Latest design
-- Full-width dark navigation with cyan `<VS />` logo, active magenta/cyan underline, GitHub, LinkedIn and glowing Connect.
-- Animated grid/particles and 3D holographic hero with mobile-friendly layout.
-- **Google AI Search** command dialog (button or Ctrl/Cmd + K). Queries open Google's AI Mode results **on Google** (search URL `udm=50`); Google account/region availability applies. No AI model, API key or Google search data is hosted by the portfolio.
-- Responsive menu, light/dark theme, 3D skill cards, featured projects and GitHub auto-sync.
-- Detailed experience cards, education, certificates, resume, contact and anonymous feedback.
+## Features
+- Neon cyan night mode and Matrix-green hacker day mode with cursor parallax, glowing trails and floating particles.
+- Interactive Google-inspired profile search section. Buttons open Google AI Mode search where supported. The panel is **not** an official Google product and does not receive live Google results inside the portfolio.
+- Five featured project **illustrations** in `assets/`, each clearly marked *illustrated preview*, not genuine screenshots.
+- Featured project GitHub source and demo links. TEJA AI links to a **sample UI preview** in `teja-demo/`; full AI inference needs a properly configured backend.
+- Public GitHub repository Auto-Sync and featured project carousel; incomplete repositories listed by name.
+- Separate internships, academic history, skills and contact.
+- Eleven certificate titles with **Google search links only** (not credential verification links).
+- Feedback form UI (requires Apps Script authorization and endpoint to send).
 
-## Deployment
-Use GitHub **Settings → Pages → Deploy from a branch → main → /(root)**.
-Open: https://viveksahu1974.github.io/portfolio/
+## Hosting
+GitHub Pages: **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-## Required assets (not yet committed)
-The homepage still refers to `VIVEKRESUME.pdf` and files at `certificates/cert-01.png` through `certificates/cert-11.*`. Upload these exact files and paths for previews and resume downloads to work. Do not publish a resume containing a full home address if you do not want it public.
+Website: https://viveksahu1974.github.io/portfolio/
 
-## Feedback
-`APPS_SCRIPT_URL` in `index.html` needs your deployed, authorized Google Apps Script `/exec` URL before feedback can be delivered to your Gmail. Do not commit API keys, access tokens or Google credentials to this public repo.
+## Assets and remaining setup
+The project illustrations are tracked in `assets/`. The portfolio still links to `VIVEKRESUME.pdf`; **upload the authorized public resume PDF** to that root path separately for View/Download to work. Review personal details before making a resume public.
 
-## Projects
-GitHub Auto-Sync reads public repositories. Featured projects retain real GitHub links and verified/configured demo links. TEJA AI includes an **interactive UI demo with sample responses**, not a hosted inference backend. Incomplete projects are shown by name rather than given fake Live Demo buttons.
+Certificates no longer link to missing PDF/image uploads; their Google buttons are topical searches and do **not** display original certificates.
 
-## Privacy
-The contact section publicly displays the phone number and email address supplied by the portfolio owner.
+For feedback delivery, configure `APPS_SCRIPT_URL` in `index.html` with a deployed and authorized Apps Script web app. Never commit secrets or credentials.
+
+## About
+Developer: Vivek Sahu · B.Tech Information Technology (MSIT, Delhi).
+GitHub: https://github.com/viveksahu1974
+LinkedIn: https://www.linkedin.com/in/vivek-sahu-1657a8268/
