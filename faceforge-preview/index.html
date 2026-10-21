@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#070e1d"/>
+<title>FaceForge AI | Interactive Product Preview — Vivek Sahu</title>
+<meta name="description" content="Interactive browser walkthrough of the local-first FaceForge AI project. A UI preview only; real face processing requires the Python Gradio backend."/>
+<style>
+:root{color-scheme:dark;--bg:#050b19;--panel:#101a30;--line:#305478;--text:#effbff;--muted:#9db5ce;--mint:#51f7d0;--cyan:#5cbfff;--violet:#a08cff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 69% 22%,#15315a 0,transparent 39%),radial-gradient(ellipse at 12% 74%,#1a194b 0,transparent 40%),#050b19;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh}
+body:before{content:'';position:fixed;inset:0;background:linear-gradient(90deg,#39d1ff0b 1px,transparent 1px),linear-gradient(#39d1ff0b 1px,transparent 1px);background-size:46px 46px;z-index:-1;pointer-events:none}
+a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #70fbed;outline-offset:3px}
+header{max-width:1420px;margin:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:25px 24px;border-bottom:1px solid #39608788}
+.brand{font-size:1.4rem;font-weight:850;letter-spacing:-.06em}.brand b{color:var(--mint)}.brand small{display:block;font-size:.65rem;letter-spacing:.16em;color:#a1c5df;margin-top:6px}
+.header-right{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.header-right a{border:1px solid #54a4e36e;padding:10px 14px;border-radius:11px;background:#14253fc4;font-size:.81rem;font-weight:700}
+.header-right a:hover{border-color:#66ffdb}
+.notice{display:flex;align-items:center;gap:10px;border:1px solid #58d3c28f;background:#0d3e3c5e;border-radius:100px;color:#afffea;font-size:.69rem;font-weight:900;letter-spacing:.11em;padding:10px 13px}
+.notice:before{content:'●';color:#3cffac}
+main{max-width:1420px;margin:auto;padding:44px 24px 80px}
+.eyebrow{font-size:.7rem;letter-spacing:.23em;font-weight:850;color:var(--mint)}
+h1{font-size:clamp(2.7rem,6vw,5.6rem);line-height:1.03;letter-spacing:-.075em;margin:16px 0 18px;max-width:900px}
+h1 span{background:linear-gradient(110deg,#63fce6,#65bfff,#ad8cff);color:transparent;background-clip:text}
+.lead{color:#aec3db;max-width:780px;line-height:1.8;font-size:.99rem}
+.layout{display:grid;grid-template-columns:minmax(250px,330px) minmax(0,1fr);gap:22px;margin-top:34px}
+.panel{background:linear-gradient(155deg,#0e1e37ef,#0a1328eb);border:1px solid #4e8db469;border-radius:22px;box-shadow:0 16px 55px #0006;overflow:hidden}
+.side{padding:23px}
+.side h2{margin:0 0 7px;font-size:1.03rem}.side p{font-size:.8rem;line-height:1.7;color:var(--muted);margin:0 0 16px}
+.tabs{display:grid;gap:9px;margin-top:20px}
+.tabs button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid #3c61765b;border-radius:13px;padding:13px 12px;color:#b2cbdc;background:#0b1b30;font-weight:720;font-size:.84rem;transition:.2s}
+.tabs button.selected,.tabs button:hover{border-color:#4ee6e1;color:white;background:linear-gradient(90deg,#1251648a,#163b6a);box-shadow:0 0 18px #26deed25}
+.num{font-size:.7rem;color:#89ffe4;letter-spacing:.03em}
+.gap{height:1px;background:#49749655;margin:22px 0}
+.scope h3{font-size:.84rem;margin:0 0 8px}.scope ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}.scope li{color:#94b6ca;font-size:.78rem}.scope li:before{content:'✓';color:#50ecca;margin-right:8px}
+.preview{min-height:580px}
+.preview-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:19px 24px;border-bottom:1px solid #50809e4d}
+.preview-header span{font-weight:800;font-size:.9rem}.preview-header small{font-size:.66rem;letter-spacing:.12em;color:#8efcdd;font-weight:800}
+.preview-body{display:grid;grid-template-columns:minmax(240px,1fr) minmax(235px,.83fr);gap:22px;padding:24px}
+.scene{position:relative;min-height:380px;border:1px solid #56d6ff68;border-radius:19px;background:radial-gradient(ellipse at center,#163b60 0,#0a1a32 68%,#081327 100%);overflow:hidden;touch-action:none}
+.scene:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#4ab7f70a 1px,transparent 1px),linear-gradient(#4ab7f70a 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+.scene canvas{width:100%;height:100%;display:block;position:absolute;inset:0;cursor:grab}.scene canvas:active{cursor:grabbing}
+.scene-tag{position:absolute;left:14px;top:15px;font-size:.65rem;letter-spacing:.12em;color:#a4e6ff;border:1px solid #73b7db6b;background:#06172bbb;padding:7px 10px;border-radius:7px;pointer-events:none}
+.scene-footer{position:absolute;bottom:13px;left:14px;color:#87c6df;font-size:.67rem;letter-spacing:.07em;pointer-events:none}
+.feature-details h2{font-size:1.3rem;margin:7px 0 9px}.feature-details p{font-size:.88rem;line-height:1.7;color:#adc3da}
+.feature-details h3{font-size:.85rem;color:#96f8e7;margin-top:23px}
+.capabilities{padding:0;list-style:none;display:grid;gap:9px}
+.capabilities li{font-size:.82rem;padding:11px 13px;border:1px solid #4979946b;border-radius:9px;background:#11253d;line-height:1.5;color:#d1e8f1}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #65fce0;background:linear-gradient(115deg,#4feccc,#459fea);color:#031526;font-weight:850;padding:12px 15px;border-radius:11px;font-size:.8rem}
+.btn.secondary{background:#162b45;border-color:#4d8bad;color:#bcdef1}
+.btn:hover{filter:brightness(1.13)}
+.sensitive{border-left:3px solid #ffd482;padding:11px 14px;background:#74501b23;color:#efcfa5;font-size:.78rem;line-height:1.6;margin-top:17px}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:0 24px 25px}
+.controls label{font-size:.72rem;color:#a6d2e3;display:flex;gap:12px;align-items:center}.controls input[type=range]{accent-color:#64ffe5;width:135px}
+.code{margin-top:24px;padding:22px 26px;background:#0b192ff0;border:1px solid #3b72956b;border-radius:20px;display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+.code h3{margin:0 0 10px;font-size:1rem}.code p{font-size:.81rem;color:#9db9cf;line-height:1.6;margin:0}
+.code code{display:block;color:#90ffdf;font:500 .8rem/1.7 ui-monospace,Consolas,monospace;margin-top:9px;overflow-wrap:anywhere}
+footer{text-align:center;padding:22px;color:#8ca6bb;font-size:.77rem;border-top:1px solid #31577677}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){main{padding:30px 14px 60px}.preview-body{grid-template-columns:1fr}.scene{min-height:320px}.tabs{grid-template-columns:1fr}.preview-header,.preview-body,.controls{padding:17px}.code{padding:18px}header{padding:17px 14px}.brand{font-size:1.13rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+ <a href="../#projects" class="brand">FACE<b>FORGE</b> AI <small>BY VIVEK SAHU · PROJECT SHOWCASE</small></a>
+ <div class="header-right"><span class="notice">INTERACTIVE UI PREVIEW · NO AI INFERENCE</span><a href="https://github.com/viveksahu1974/FaceForge-AI" target="_blank" rel="noopener noreferrer">GitHub source ↗</a><a href="../#projects">← Back to Portfolio</a></div>
+</header>
+<main>
+ <div class="eyebrow">02D / 3D FACE ANALYSIS TOOLKIT</div>
+ <h1>See the workflow.<br/><span>Explore FaceForge AI.</span></h1>
+ <p class="lead">A clickable showcase of the five tabs in the actual Python + Gradio project. The animated mesh below is an illustration. No photographs are uploaded, no identities are matched and no real AI analysis runs in this browser preview.</p>
+ <div class="layout">
+  <aside class="panel side">
+    <h2>Five project modules</h2><p>Choose a tool to see its planned input, capabilities and back-end requirements.</p>
+    <nav class="tabs" id="featureTabs" aria-label="FaceForge feature previews">
+      <button type="button" data-tab="0" class="selected" aria-pressed="true"><span class="num">01</span> Detection &amp; Alignment</button>
+      <button type="button" data-tab="1" aria-pressed="false"><span class="num">02</span> Recognition (enrolled only)</button>
+      <button type="button" data-tab="2" aria-pressed="false"><span class="num">03</span> Approximate Age Range</button>
+      <button type="button" data-tab="3" aria-pressed="false"><span class="num">04</span> 3D Reconstruction</button>
+      <button type="button" data-tab="4" aria-pressed="false"><span class="num">05</span> Consented Face Swap</button>
+    </nav>
+    <div class="gap"></div>
+    <div class="scope"><h3>Project stack</h3><ul><li>Python 3.10–3.11</li><li>Gradio 4.44.1 browser UI</li><li>PyTorch + FaceNet</li><li>OpenCV + optional 3DDFA_V2</li><li>Local-first processing</li></ul></div>
+  </aside>
+  <section class="panel preview" aria-live="polite">
+   <div class="preview-header"><span id="previewTitle">01 / Detection &amp; Alignment</span><small>VISUALIZATION / SAMPLE ONLY</small></div>
+   <div class="preview-body">
+    <div class="scene" id="meshScene"><canvas id="meshCanvas" aria-label="Interactive artistic face mesh preview"></canvas><span class="scene-tag" id="sceneTag">5-POINT LANDMARKS · ILLUSTRATION</span><span class="scene-footer">Drag to rotate · Move cursor for parallax</span></div>
+    <div class="feature-details">
+      <div class="eyebrow" id="stepKicker">MODULE 01</div>
+      <h2 id="featureTitle">Detection &amp; Alignment</h2>
+      <p id="featureDescription">Locate faces, show five facial landmarks, and align the largest face to a standardized crop using MTCNN and OpenCV.</p>
+      <h3>ACTUAL PYTHON APPLICATION</h3>
+      <ul id="capabilities" class="capabilities">
+        <li>MTCNN face boxes and five landmarks</li><li>OpenCV similarity-transform alignment</li><li>Runs locally in Python/Gradio</li>
+      </ul>
+      <div class="actions"><button class="btn" id="previewStep" type="button">Explore next module →</button><a class="btn secondary" href="https://github.com/viveksahu1974/FaceForge-AI" target="_blank" rel="noopener noreferrer">Source Code ↗</a></div>
+      <div class="sensitive">This is a visual UI walkthrough, not a hosted face-analysis model. Real detections, recognition, age prediction, 3D meshes, and swaps require the local Python backend and appropriate pretrained models.</div>
+    </div>
+   </div>
+   <div class="controls"><label for="rotationSlider">Mesh angle <input id="rotationSlider" type="range" min="-70" max="70" value="14"/></label><label for="landmarkToggle"><input id="landmarkToggle" type="checkbox" checked/> Show illustrated landmarks</label><span id="angleReadout" aria-live="off">14°</span></div>
+  </section>
+ </div>
+ <section class="code"><div><h3>Run the real FaceForge AI locally</h3><p>Install the actual Python project on your own device to use face detection, alignment, recognition of consenting subjects, age-range estimation and optional reconstruction/swap. Pretrained weights download on first use.</p><code>py -3.11 -m venv .venv<br/>.venv\Scripts\python.exe -m pip install -e .<br/>.venv\Scripts\python.exe app.py</code></div><div><a class="btn" href="https://github.com/viveksahu1974/FaceForge-AI#readme" target="_blank" rel="noopener noreferrer">Installation Instructions ↗</a></div></section>
+</main>
+<footer>FaceForge AI © 2026 Vivek Sahu · UI preview only · Consent required for any biometric processing · Not a live inference service</footer>
+<script>
+(()=>{
+'use strict';
+const tabs=[...document.querySelectorAll('[data-tab]')];
+const definitions=[
+ {title:'Detection & Alignment',tag:'5-POINT LANDMARKS · ILLUSTRATION',description:'The Python application uses facenet-pytorch MTCNN to detect faces and five landmarks. OpenCV can align the largest face for further processing.',items:['MTCNN bounding boxes & 5-point landmarks','OpenCV similarity-transform alignment','Input: authorized photograph · Output: annotated image or aligned crop']},
+ {title:'Recognition (enrolled only)',tag:'CONSENT-BASED GALLERY · ILLUSTRATION',description:'FaceNet embeddings can compare a photo with a small local gallery of people who opted in. This is not identity recognition for arbitrary strangers.',items:['Enroll only people who gave permission','Local embeddings stored in private/gallery.json','Threshold is a sample setting, not a validated identity decision']},
+ {title:'Approximate Age Range',tag:'ESTIMATED AGE · NO INFERENCE',description:'An optional ViT age classifier predicts a broad age range, not someone’s actual age. Results can be inaccurate.',items:['Runs only when the model has loaded in Python','Model class probability is not identity verification','No age predictions are generated in this browser preview']},
+ {title:'3D Reconstruction',tag:'FACE MESH · VISUAL EXAMPLE',description:'An optional locally installed 3DDFA_V2 extension reconstructs a face mesh for export as OBJ or PLY. The geometric illustration is not model output.',items:['Requires separately installed pretrained 3DDFA_V2','Export OBJ / PLY on the Python backend','Animated mesh here is synthetic and used only for interface illustration']},
+ {title:'Consented Face Swap',tag:'PHOTO / VIDEO WORKFLOW',description:'The Python project includes a basic OpenCV geometric swap, with an optional separately licensed neural backend. Edits must have consent and visible labeling.',items:['Only edit photos or videos with the subjects’ permission','Baseline geometric mode is not high-quality deepfake generation','Optional neural swap needs licensed ONNX weights']},
+];
+const canvas=document.getElementById('meshCanvas'),ctx=canvas.getContext('2d');
+const scene=document.getElementById('meshScene');
+let index=0,theta=.24,targetTheta=.24,drag=false,lastX=0,spin=0,showMarks=true;
+const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const faces=[];
+for(let y=0;y<=18;y++){
+ const v=(y/18)*2-1;
+ const width=Math.pow(Math.max(.04,1-v*v),.55)*.88*(v>0?1-.18*v:1);
+ for(let x=0;x<=14;x++){
+  const u=(x/14)*2-1;
+  let z=Math.sqrt(Math.max(0,1-u*u))*.31+(1-Math.abs(v))*.08;
+  if(v>-.12&&v<.42&&Math.abs(u)<.18)z+=.21*(1-Math.abs(u)/.18)*(1-Math.abs(v-.16)/.3);
+  faces.push([u*width,v*.95,z]);
+ }
+}
+const featureMarks=[[-.35,-.18,.32],[.35,-.18,.32],[0,.12,.55],[-.27,.46,.32],[.27,.46,.32]];
+function measure(){let r=scene.getBoundingClientRect();let dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.max(1,Math.round(r.width*dpr));canvas.height=Math.max(1,Math.round(r.height*dpr));ctx.setTransform(dpr,0,0,dpr,0,0);}
+function project(p,w,h){
+ const a=theta,b=-.08+Math.sin(spin*.7)*.04;
+ const X=p[0]*Math.cos(a)-p[2]*Math.sin(a),Z=p[0]*Math.sin(a)+p[2]*Math.cos(a);
+ const Y=p[1]*Math.cos(b)-Z*Math.sin(b);
+ const Q=1.7/(1.7+Z*.24);
+ return [w/2+X*w*.275*Q,h/2+Y*h*.37*Q,Z];
+}
+function draw(t){
+ const w=scene.clientWidth,h=scene.clientHeight;
+ if(!w||!h)return;
+ ctx.clearRect(0,0,w,h);
+ if(!drag)theta+=(targetTheta-theta)*.1;
+ const hue=['#65ffe3','#78d9ff','#a2a1ff','#5af4cf','#ffbc83'][index];
+ const pts=faces.map(p=>project(p,w,h));
+ const opacity=showMarks?.5:.3;ctx.lineWidth=.8;ctx.strokeStyle='rgba(93,205,246,'+opacity+')';
+ for(let y=0;y<=18;y++)for(let x=0;x<=14;x++){
+  const n=y*15+x;
+  if(x<14){ctx.beginPath();ctx.moveTo(pts[n][0],pts[n][1]);ctx.lineTo(pts[n+1][0],pts[n+1][1]);ctx.stroke();}
+  if(y<18){ctx.beginPath();ctx.moveTo(pts[n][0],pts[n][1]);ctx.lineTo(pts[n+15][0],pts[n+15][1]);ctx.stroke();}
+  if(x<14&&y<18){ctx.beginPath();ctx.moveTo(pts[n][0],pts[n][1]);ctx.lineTo(pts[n+16][0],pts[n+16][1]);ctx.stroke();}
+ }
+ ctx.fillStyle=hue;
+ for(let k=0;k<pts.length;k+=3){const p=pts[k];ctx.beginPath();ctx.arc(p[0],p[1],1.1,0,Math.PI*2);ctx.fill();}
+ if(showMarks){
+  ctx.fillStyle='#b5fff0';ctx.strokeStyle='#9affd9';ctx.lineWidth=1;
+  for(const p of featureMarks){const pt=project(p,w,h);ctx.beginPath();ctx.arc(pt[0],pt[1],4.6,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(pt[0],pt[1],12,0,Math.PI*2);ctx.stroke();}
+ }
+ if(!reduced){spin=t/1300;requestAnimationFrame(draw);}
+}
+function setTab(i){
+ index=((i%definitions.length)+definitions.length)%definitions.length;
+ const d=definitions[index];
+ for(const b of tabs){let on=Number(b.dataset.tab)===index;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on));}
+ document.getElementById('previewTitle').textContent=String(index+1).padStart(2,'0')+' / '+d.title;
+ document.getElementById('sceneTag').textContent=d.tag;
+ document.getElementById('featureTitle').textContent=d.title;
+ document.getElementById('featureDescription').textContent=d.description;
+ document.getElementById('stepKicker').textContent='MODULE '+String(index+1).padStart(2,'0');
+ const ul=document.getElementById('capabilities');ul.replaceChildren(...d.items.map(item=>{const li=document.createElement('li');li.textContent=item;return li;}));
+ if(reduced)draw(0);
+}
+tabs.forEach(b=>b.addEventListener('click',()=>setTab(Number(b.dataset.tab))));
+document.getElementById('previewStep').addEventListener('click',()=>setTab(index+1));
+const slider=document.getElementById('rotationSlider');slider.addEventListener('input',()=>{targetTheta=Number(slider.value)*Math.PI/180;document.getElementById('angleReadout').textContent=slider.value+'°';if(reduced)draw(0);});
+document.getElementById('landmarkToggle').addEventListener('change',e=>{showMarks=e.target.checked;if(reduced)draw(0);});
+canvas.addEventListener('pointerdown',e=>{drag=true;lastX=e.clientX;canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointermove',e=>{if(!drag)return;theta+=(e.clientX-lastX)*.008;targetTheta=theta;lastX=e.clientX;if(reduced)draw(0);});
+const stop=()=>drag=false;canvas.addEventListener('pointerup',stop);canvas.addEventListener('pointercancel',stop);
+window.addEventListener('resize',()=>{measure();if(reduced)draw(0);});
+measure();setTab(0);if(!reduced)requestAnimationFrame(draw);
+})();
+</script>
+</body></html>
