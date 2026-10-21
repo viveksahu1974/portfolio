@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050a16">
+<title>ORBITAL — Space Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="space" aria-label="Interactive space explorer"></canvas>
+
+  <div id="menuOverlay" class="overlay show">
+    <div class="overlay-card">
+      <div class="overlay-head">
+        <div class="eyebrow"><span class="dot"></span> INTERACTIVE SPACE JOURNEY</div>
+        <h2>Choose your first <span>interface</span>.</h2>
+        <p>Start with one of three polished experiences: a full Solar System explorer, a Milky Way galaxy view, or a dramatic Black Hole visualizer. Drag to rotate, zoom in, click objects for details, and enjoy a moving deep-space background.</p>
+      </div>
+      <div class="scene-grid">
+        <div class="scene-card solar">
+          <span class="scene-tag">01 · Solar System</span>
+          <h3>Solar System</h3>
+          <p>Sun in the center, all 8 planets, Earth’s Moon, Saturn’s rings, an asteroid belt, orbit controls, and detailed object cards.</p>
+          <div class="scene-features"><span class="chip">Sun details</span><span class="chip">Planet focus</span><span class="chip">3D motion</span></div>
+          <button class="scene-enter" data-scene="solar">Enter</button>
+        </div>
+        <div class="scene-card milkyway">
+          <span class="scene-tag">02 · Galaxy Map</span>
+          <h3>Milky Way</h3>
+          <p>Explore a stylized rotating Milky Way with a glowing galactic core, our Solar neighborhood, Orion Spur, and Sagittarius A*.</p>
+          <div class="scene-features"><span class="chip">Galaxy core</span><span class="chip">Parallax stars</span><span class="chip">Spiral arms</span></div>
+          <button class="scene-enter" data-scene="milkyway">Enter</button>
+        </div>
+        <div class="scene-card blackhole">
+          <span class="scene-tag">03 · Extreme Space</span>
+          <h3>Black Hole</h3>
+          <p>Watch an animated event horizon, hot accretion disk, lensing glow, and jets while opening an info panel about black holes.</p>
+          <div class="scene-features"><span class="chip">Accretion disk</span><span class="chip">Jets</span><span class="chip">Light warp</span></div>
+          <button class="scene-enter" data-scene="blackhole">Enter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="hud">
+    <div class="brand">
+      <span class="brand-symbol"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5.5" fill="#f3be78"/><ellipse cx="16" cy="16" rx="14" ry="7" transform="rotate(-33 16 16)" stroke="#a6daf9" stroke-width="1.3"/><circle cx="27" cy="9" r="2" fill="#8acfff"/></svg></span>
+      <div><div class="brand-title">ORBITAL</div><div class="brand-sub">INTERACTIVE SPACE ATLAS</div></div>
+    </div>
+    <div class="top-right">
+      <span class="live" id="liveText">LIVE SOLAR SYSTEM SIMULATION</span>
+      <button id="menuBtnTop" class="icon-btn" title="Open interface chooser" aria-label="Open interface chooser"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <button id="fullscreen" class="icon-btn" title="Toggle fullscreen" aria-label="Toggle fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H4a1 1 0 0 0-1 1v4m13-5h4a1 1 0 0 1 1 1v4M3 16v4a1 1 0 0 0 1 1h4m13-5v4a1 1 0 0 1-1 1h-4"/></svg></button>
+    </div>
+  </header>
+
+  <section class="hud intro">
+    <div class="eyebrow"><span class="dot"></span> <span id="introEyebrow">BEYOND THE HORIZON</span></div>
+    <h1 id="introTitle">Explore our<br><span>Solar System.</span></h1>
+    <p id="introText">The Sun, eight extraordinary worlds, one moon system, and a moving star field. Click any body to begin your journey.</p>
+    <div class="pill-row" id="objectNav"></div>
+  </section>
+
+  <button id="mobileOpen" class="mobile-open">✦ Details</button>
+
+  <aside id="panel" class="panel" aria-label="Information panel">
+    <button class="panel-close" id="closePanel" aria-label="Close details">×</button>
+    <div class="panel-head"><div class="kicker" id="panelKicker">CELESTIAL BODY</div><div id="number" class="round">01 / 09</div></div>
+    <div class="entity-title"><div class="entity-mark" id="entityMark"></div><div><h2 id="entityName" class="entity-name">Sun</h2><div id="entityType" class="entity-type">Star</div></div></div>
+    <div class="rule"></div>
+    <div class="stats" id="stats"></div>
+    <div class="rule"></div>
+    <h3 class="fact-heading">Interesting facts</h3>
+    <ul class="facts" id="facts"></ul>
+    <div class="panel-footer" id="panelFooter">Drag to orbit the camera, scroll or pinch to zoom, and use the controls below to change the motion of the scene.</div>
+  </aside>
+
+  <div class="hud bottom">
+    <div class="control-bar">
+      <button id="play" class="play-btn" title="Pause simulation" aria-label="Pause simulation"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5h3v14H8zm6 0h3v14h-3z"/></svg></button>
+      <div class="speed-box">
+        <div class="speed-heading"><span class="mini-label">TIME SPEED</span><span id="speedValue" class="speed-val">1.0×</span></div>
+        <input id="speed" type="range" min="0" max="100" value="40">
+      </div>
+      <div class="sep"></div>
+      <div class="toggles">
+        <button id="toggleLabels" class="toggle on" aria-pressed="true"><i></i> Labels</button>
+        <button id="toggleOrbits" class="toggle on" aria-pressed="true"><i></i> Guides</button>
+      </div>
+      <button id="reset" class="reset-btn" title="Reset camera" aria-label="Reset camera"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0 2 5.3M20 4v7h-7"/></svg></button>
+      <button id="menuBtnBottom" class="scene-btn">Scenes</button>
+    </div>
+    <div class="hint"><span><b>Drag</b> rotate</span><span><b>Shift + Drag</b> pan</span><span><b>Scroll / Pinch</b> zoom</span><span><b>Click</b> focus & details</span></div>
+  </div>
+
+  <div id="hoverTip" class="hover-tip"></div>
+  <div class="foot-note">Approximate real-world facts; distances and sizes are artistically compressed for clarity.<br>Moving background and scene visuals are designed for exploration, not scale-perfect simulation.</div>
+</div>
+
+<script defer src="script.js"></script>
+<a href="../#projects" class="portfolio-return" aria-label="Return to Vivek Sahu portfolio">← Portfolio</a>
+</body>
+</html>
