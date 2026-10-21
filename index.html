@@ -288,7 +288,7 @@ body:not(.night) .feedback select,body:not(.night) .feedback textarea,body:not(.
 <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">HTML5 Canvas</span><span class="tag">3D-style Space</span></div>
 <div class="project-links"><a href="https://github.com/viveksahu1974/ORBITAL-Space-Explorer" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a><a href="orbital/" target="_blank" rel="noopener noreferrer">▶ Explore Live Demo ↗</a></div></article>
 <article class="card tilt project-card has-project-art">
-<div class="project-media"><img src="assets/faceforge-ai.svg?v=20261021" alt="Illustrated interface preview of FaceForge AI facial landmark and 3D mesh tools" loading="lazy"/><span class="project-art-badge sample">◉ UI Preview Only</span><span class="project-media-tag">Computer Vision / AI</span></div>
+<div class="project-media"><img src="assets/faceforge-ai.svg?v=20261021svgfix1" alt="Illustrated interface preview of FaceForge AI facial landmark and 3D mesh tools" loading="lazy"/><span class="project-art-badge sample">◉ UI Preview Only</span><span class="project-media-tag">Computer Vision / AI</span></div>
 <h3>FaceForge AI — Face Analysis Toolkit</h3>
 <p>Local-first Python/Gradio project with detection, alignment, opt-in recognition, approximate age range, optional 3D reconstruction and consent-based face swapping. Interactive web preview shows the UI only; real models run locally.</p>
 <div class="project-tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Gradio</span></div>
@@ -401,7 +401,7 @@ const themeButton=document.getElementById('theme');function setTheme(mode){docum
       if(preview){
         card.classList.add('has-project-art');
         const media=document.createElement('div');media.className='project-media';
-        const img=document.createElement('img');img.src='assets/'+preview[0]+'?v=20261019c';
+        const img=document.createElement('img');img.src='assets/'+preview[0]+'?v='+(repo.name.toLowerCase()==='faceforge-ai'?'20261021svgfix1':'20261019c');
         img.loading='lazy';img.alt='Illustrated preview of '+repo.name;
         media.append(img);
         const badge=document.createElement('span');badge.className='project-art-badge'+(preview[2]?' sample':'');badge.textContent=preview[2]?'◉ UI Preview':'● Demo Link';media.append(badge);
