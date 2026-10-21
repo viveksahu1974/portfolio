@@ -15,6 +15,14 @@ An original responsive developer portfolio inspired by futuristic black-and-cyan
 ## Identity / Search metadata
 `index.html` includes canonical URL, social profile links and a Person JSON-LD identity for `Vivek Sahu` at MSIT Delhi. Search engines may take time to index it and can still confuse people with the same name. The live answer panel is first-party rather than Google AI-generated.
 
+## Recently added projects (October 2026)
+
+- **[ORBITAL — Space Explorer](https://github.com/viveksahu1974/ORBITAL-Space-Explorer)** — [live interactive space explorer](https://viveksahu1974.github.io/portfolio/orbital/) with three original Canvas scenes: Solar System, Milky Way, Black Hole.
+- **[FaceForge AI](https://github.com/viveksahu1974/FaceForge-AI)** — [interactive UI walkthrough](https://viveksahu1974.github.io/portfolio/faceforge-preview/) of the five Python/Gradio features. This is **not a live PyTorch inference backend**; the working models require Python local setup.
+
+### Auto-Sync visibility
+Curated featured repositories appear in the gallery even when no `homepage` is set on GitHub. Newly published code repositories with meaningful source content can also appear as cards even without a configured hosted URL, but they **do not receive a false Live Demo button**. README-only/empty/incomplete repositories stay in the development-name list.
+
 ## Hosting
 GitHub Pages: **Settings → Pages → Deploy from a branch → main → /(root)**.
 
