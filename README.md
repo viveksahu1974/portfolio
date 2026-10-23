@@ -31,6 +31,12 @@ An original responsive developer portfolio inspired by futuristic black-and-cyan
 ### Auto-Sync visibility
 Curated featured repositories appear in the gallery even when no `homepage` is set on GitHub. Newly published code repositories with meaningful source content can also appear as cards even without a configured hosted URL, but they **do not receive a false Live Demo button**. README-only/empty/incomplete repositories stay in the development-name list.
 
+## Resume & feedback status
+
+- **Resume repaired:** `VIVEKRESUME.pdf` is now committed at the repo root and the Hero/Resume buttons point to it. It is a one-page **public portfolio edition** based on the resume supplied by the owner, with the precise home street address removed for privacy. The private original CV was not uploaded unchanged.
+- **Feedback checked:** frontend collects rating, liked, improvement, recommendation and message without a name/email field. Anonymous Gmail delivery is **not active** until the owner authorizes and deploys `Code.gs` on Google Apps Script and fills `APPS_SCRIPT_URL` in `index.html`. [Full steps](./FEEDBACK_SETUP.md).
+- **Immediate fallback:** visitors may choose `Send via Email (not anonymous)`, which opens their own mail app with their answers. The visitor must press Send; the website does not automatically email or falsely claim delivery.
+
 ## Hosting
 GitHub Pages: **Settings → Pages → Deploy from a branch → main → /(root)**.
 
