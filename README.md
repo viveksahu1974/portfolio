@@ -1,5 +1,13 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
+## Latest project showcase (23 October 2026)
+
+- **[Interface Design System — React.js](https://github.com/viveksahu1974/Interface-Design-System-React.js-Project)** — [deployed React/Vite live app](https://viveksahu1974.github.io/Interface-Design-System-React.js-Project/). The project's GitHub Pages workflow succeeded on 23 October 2026.
+- **[PromptShield AI](https://github.com/viveksahu1974/PromptShield-AI)** — [browser rule-scanner demonstration](https://viveksahu1974.github.io/portfolio/promptshield-demo/), distinct from its FastAPI/React backend. Rules-only educational MVP.
+- **[Student Management System](https://github.com/viveksahu1974/Upskillcampus-Final-Project)** — [interactive synthetic-data UI preview](https://viveksahu1974.github.io/portfolio/student-manager-demo/), distinct from the actual Python/Tkinter/SQLite desktop application.
+
+Project cards have illustrated, project-specific thumbnails. GitHub Auto-Sync reads public repositories on page load and supplies generic source cards for substantial future repositories; a hosted Live Demo is added only where one is configured and supported. The project's status is explicit so a mock preview is not mistaken for the production app.
+
 An original responsive developer portfolio inspired by futuristic black-and-cyan interfaces, with green hacker day mode, interactive cursor effects, 3D project cards and a Google Search-inspired profile panel.
 
 ## Features
