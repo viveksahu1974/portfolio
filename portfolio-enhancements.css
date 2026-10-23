@@ -59,3 +59,38 @@ body:not(.night) #certifications .certificate-name-card .cert-google{color:#70ff
 body:not(.night) #certifications .cert-description{color:#abd8b5}
 @media(max-width:870px){#certifications .certificate-name-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.google-ai-shell{padding:21px}}
 @media(max-width:550px){#certifications .certificate-name-grid{grid-template-columns:1fr}.gai-search-bar{padding:9px 10px}.gai-search-bar input{font-size:.94rem}.gai-search-bar button{padding:9px 11px;font-size:.85rem}.gai-questions a{font-size:.86rem;padding:13px 15px}.google-ai-shell{border-radius:23px;padding:15px}#githubProjects .project-card.has-project-art .project-media{height:175px;min-height:175px}}
+
+
+/* Future GitHub Auto-Sync repositories get real text-led artwork rather than mismatched emojis. */
+#githubProjects .project-card.generated-project-art .project-media-generated{
+ display:flex;position:relative;align-items:stretch;justify-content:center;
+ background:radial-gradient(ellipse at 25% 15%,#18cbe244,transparent 48%),
+ linear-gradient(155deg,#071929,#0b2444 58%,#211748);
+ border-bottom:1px solid #00ddec78;
+}
+#githubProjects .project-card.generated-project-art .project-media-generated:before{
+ content:'';position:absolute;inset:0;background-image:linear-gradient(#28ddff14 1px,transparent 1px),linear-gradient(90deg,#28ddff14 1px,transparent 1px);
+ background-size:34px 34px;pointer-events:none
+}
+#githubProjects .project-card.generated-project-art .generated-cover{
+ display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+ padding:32px 22px 13px;position:relative;z-index:1;width:100%;min-width:0
+}
+#githubProjects .project-card.generated-project-art .generated-emblem{
+ display:grid;place-items:center;width:70px;height:70px;border:2px solid #55eff2;
+ border-radius:17px;color:#9ef9ff;font-size:1.6rem;font-weight:900;
+ background:#0b344e88;box-shadow:0 0 30px #24eaff5a;margin-bottom:11px
+}
+#githubProjects .project-card.generated-project-art .generated-cover strong{
+ color:#e3fcff;font:800 clamp(.95rem,1.6vw,1.25rem)/1.22 'Space Grotesk',system-ui,sans-serif;
+ overflow-wrap:anywhere;max-width:95%;text-shadow:0 0 15px #49dfff54
+}
+#githubProjects .project-card.generated-project-art .generated-cover small{
+ color:#9ad8ec;font-size:.76rem;margin-top:9px;font-weight:700
+}
+body:not(.night) #githubProjects .project-card.generated-project-art .project-media-generated{
+ background:radial-gradient(ellipse at 21% 22%,#20964680,transparent 52%),linear-gradient(120deg,#072114,#082c20)
+}
+body:not(.night) #githubProjects .project-card.generated-project-art .generated-emblem{border-color:#61ff9a;color:#7cffad}
+body:not(.night) #githubProjects .project-card.generated-project-art .generated-cover strong{color:#ceffe0}
+@media(max-width:550px){#githubProjects .project-card.generated-project-art .generated-cover{padding:24px 15px 12px}}
