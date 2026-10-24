@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">Vivek Sahu | AI, Cybersecurity and Creative Technology</title>
+<desc id="desc">A futuristic black and neon-green developer banner for Vivek Sahu.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#08100f"/><stop offset=".53" stop-color="#071b18"/><stop offset="1" stop-color="#020807"/>
+ </linearGradient>
+ <linearGradient id="neon" x1="0" x2="1">
+  <stop offset="0" stop-color="#73ffd3"/><stop offset=".52" stop-color="#00f5a0"/><stop offset="1" stop-color="#00b9a5"/>
+ </linearGradient>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+  <path d="M40 0H0V40" fill="none" stroke="#3c977b" stroke-width=".75" opacity=".17"/>
+ </pattern>
+ <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+  <feGaussianBlur stdDeviation="8"/>
+ </filter>
+ <clipPath id="clip"><rect x="0" y="0" width="1200" height="340" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+ <rect width="1200" height="340" fill="url(#bg)"/>
+ <rect width="1200" height="340" fill="url(#grid)"/>
+ <circle cx="1100" cy="40" r="175" fill="#00faab" opacity=".07" filter="url(#glow)"/>
+ <circle cx="980" cy="290" r="145" fill="#00a6a8" opacity=".09" filter="url(#glow)"/>
+ <path d="M0 290L250 40M470 340L685 90M1000 0L1200 200" stroke="#00f5a0" stroke-opacity=".13" stroke-width="2"/>
+ <rect x="35" y="34" width="1130" height="272" rx="20" fill="#08120f" fill-opacity=".75" stroke="#00f5a0" stroke-opacity=".35" stroke-width="1.5"/>
+ <path d="M63 80V59h24M1113 59h24v21M63 260v21h24M1113 281h24v-21" fill="none" stroke="#00f5a0" stroke-width="3" stroke-linecap="round"/>
+ <rect x="84" y="71" width="8" height="8" rx="2" fill="#00f5a0"/>
+ <text x="108" y="80" font-size="17" letter-spacing="4" fill="#8dffdb" font-family="DejaVu Sans,Arial,sans-serif">HELLO WORLD // I AM</text>
+ <text x="80" y="181" font-size="78" font-weight="800" letter-spacing="1" fill="#f5fff9" font-family="DejaVu Sans,Arial,sans-serif">VIVEK</text>
+ <text x="345" y="181" font-size="78" font-weight="800" letter-spacing="1" fill="url(#neon)" font-family="DejaVu Sans,Arial,sans-serif">SAHU</text>
+ <rect x="84" y="199" width="530" height="2.5" fill="url(#neon)"/>
+ <text x="85" y="240" font-size="21" font-weight="500" fill="#d4ebe1" font-family="DejaVu Sans,Arial,sans-serif">AI  /  WEB DEVELOPMENT  /  CYBERSECURITY</text>
+ <text x="85" y="278" font-size="15" letter-spacing="2" fill="#62baa0" font-family="DejaVu Sans Mono,monospace">DRIVEN BY CURIOSITY. POWERED BY TECHNOLOGY.</text>
+ <g transform="translate(963 168)">
+  <circle r="111" fill="none" stroke="#0f7c5d" stroke-width="1" stroke-dasharray="3 9"/>
+  <circle r="88" fill="none" stroke="#02e79c" stroke-opacity=".4" stroke-width="2"/>
+  <circle r="67" fill="none" stroke="#7cffe4" stroke-opacity=".4" stroke-dasharray="10 7"/>
+  <circle r="45" fill="#00e5aa" fill-opacity=".11" stroke="#00f5a0" stroke-width="1"/>
+  <path d="M-28 0H28M0 -28V28M-19 -19L19 19M19 -19L-19 19" stroke="#00f5a0" stroke-width="2" opacity=".66"/>
+  <path d="M0 -97L6 -83L0 -70L-6 -83ZM0 70L6 83L0 97L-6 83ZM-97 0L-83 -6L-70 0L-83 6ZM70 0L83 -6L97 0L83 6Z" fill="#00f5a0"/>
+  <circle cx="0" cy="0" r="12" fill="#00f5a0" filter="url(#glow)" opacity=".7"/>
+  <circle cx="0" cy="0" r="11" fill="#00f5a0"/>
+ </g>
+ <rect x="1110" y="272" width="8" height="8" rx="4" fill="#00f5a0"/>
+ <text x="946" y="283" text-anchor="middle" font-size="12" letter-spacing="2" fill="#9feccd" font-family="DejaVu Sans Mono,monospace">SYSTEM ONLINE</text>
+</g>
+</svg>
