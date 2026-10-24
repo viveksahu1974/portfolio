@@ -94,3 +94,56 @@ body:not(.night) #githubProjects .project-card.generated-project-art .project-me
 body:not(.night) #githubProjects .project-card.generated-project-art .generated-emblem{border-color:#61ff9a;color:#7cffad}
 body:not(.night) #githubProjects .project-card.generated-project-art .generated-cover strong{color:#ceffe0}
 @media(max-width:550px){#githubProjects .project-card.generated-project-art .generated-cover{padding:24px 15px 12px}}
+
+
+/* 2026-10-25 — visible project launchers and functional navigation feedback */
+#githubProjects .project-media{position:relative!important}
+#githubProjects .project-media .demo-quick-link{
+  position:absolute!important;z-index:8!important;bottom:15px!important;left:14px!important;
+  display:inline-flex!important;align-items:center;justify-content:center;
+  min-width:128px;max-width:calc(100% - 28px);
+  padding:10px 15px!important;
+  background:linear-gradient(110deg,#16f8bd,#4be8fa)!important;
+  color:#061a21!important;border:1px solid #98ffe8!important;border-radius:100px!important;
+  text-decoration:none!important;font-size:.78rem!important;font-weight:900!important;
+  box-shadow:0 5px 20px #00dbbf90!important;white-space:nowrap!important;
+  overflow:hidden;text-overflow:ellipsis;cursor:pointer!important;
+  pointer-events:auto!important;touch-action:manipulation;
+}
+#githubProjects .project-media .demo-quick-link.preview-only{
+  background:linear-gradient(105deg,#9ae6ff,#afabff)!important;
+  box-shadow:0 5px 20px #628afe8b!important;border-color:#dcf2ff!important;
+}
+#githubProjects .project-media .demo-quick-link:hover,
+#githubProjects .project-media .demo-quick-link:focus-visible{
+  transform:translateY(-2px);filter:brightness(1.12);
+  box-shadow:0 7px 26px #40ffe9a8!important;
+}
+#projects .portfolio-live-launch{
+  margin:0!important;display:inline-flex;align-items:center;justify-content:center;
+  background:linear-gradient(110deg,#0b474d,#0a6781)!important;color:#befff0!important;
+  border:1px solid #42e7ee!important;box-shadow:0 0 13px #00c8e943!important;
+  padding:11px 18px;border-radius:12px;font-size:.82rem;
+}
+#projects .portfolio-live-launch:hover{background:#086980!important;color:#fff!important}
+#projects .gallery-toolbar small{
+  display:inline-flex;margin-left:12px;font-size:.74rem;font-weight:800;color:#7afbe0;
+  padding:5px 9px;border-radius:20px;background:#043a40;border:1px solid #18bcbc5c;
+  white-space:nowrap
+}
+#projects #refreshGithub[aria-busy=true]{opacity:.7;cursor:progress;pointer-events:none}
+#projects .gallery-toolbar button:disabled{
+  opacity:.36!important;cursor:not-allowed!important;
+  box-shadow:none!important;border-color:#527084!important
+}
+#githubProjects{cursor:grab;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+#githubProjects.dragging{cursor:grabbing;user-select:none;scroll-snap-type:none}
+#githubProjects.dragging .project-card{transition:none!important}
+#githubProjects.dragging *{user-select:none!important}
+@media(max-width:650px){
+  #projects .gallery-toolbar small{display:block;width:max-content;margin:8px 0 0}
+  #projects .portfolio-live-launch{width:100%;max-width:360px}
+  #githubProjects .project-media .demo-quick-link{
+    font-size:.72rem!important;padding:9px 12px!important;bottom:10px!important;left:10px!important;
+  }
+}
