@@ -247,7 +247,7 @@ body:not(.night) .feedback select,body:not(.night) .feedback textarea,body:not(.
 .feedback #emailFeedbackFallback{border-color:#4de8e1!important;background:rgba(20,125,136,.17)!important;color:#adfff0!important}
 body:not(.night) .feedback #emailFeedbackFallback{color:#7cf9a3!important;border-color:#51ff92!important;background:#062a18!important}
 @media(max-width:560px){.feedback-actions .btn{width:100%}}
-</style><link rel="stylesheet" href="./verified-profile-search.css?v=20261019d"/><link rel="stylesheet" href="./cyber-effects.css?v=20261019b"/><link rel="stylesheet" href="./portfolio-enhancements.css?v=20261019a"/></head><body><nav aria-label="Main navigation" class="nav nav-cyber" id="topNav">
+</style><link rel="stylesheet" href="./verified-profile-search.css?v=20261019d"/><link rel="stylesheet" href="./cyber-effects.css?v=20261019b"/><link rel="stylesheet" href="./portfolio-enhancements.css?v=20261025gallery2"/></head><body><nav aria-label="Main navigation" class="nav nav-cyber" id="topNav">
 <a class="brand-mark cyber-brand" href="#home" aria-label="Vivek Sahu Home">&lt;VS /&gt;</a>
 <div class="nav-links" id="navLinks">
 <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#internships">Experience</a><a href="#projects">Projects</a><a href="#experience">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
@@ -459,7 +459,7 @@ feedbackForm.addEventListener('submit',async e=>{
   const validUrl=(url)=>{try{const u=new URL(url);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}};
   function bindTilt(card){
     if(!matchMedia('(pointer:fine)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-    card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateY(-5px)`;});
+    card.addEventListener('pointermove',e=>{if(grid.classList.contains('dragging'))return;const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateY(-5px)`;});
     card.addEventListener('pointerleave',()=>card.style.transform='');
   }
   function render(repos){
@@ -610,6 +610,8 @@ if(repo.language)tags.append(tag(repo.language));for(const topic of (repo.topics
   }
   prev.addEventListener('click',()=>moveGallery(-1));next.addEventListener('click',()=>moveGallery(1));
   grid.addEventListener('scroll',()=>requestAnimationFrame(updateGallery),{passive:true});
+  document.addEventListener('portfolio-project-filter-changed',()=>requestAnimationFrame(updateGallery));
+  window.addEventListener('resize',()=>requestAnimationFrame(updateGallery),{passive:true});
   let dragStart=null,scrollStart=0,moved=false;
   grid.addEventListener('pointerdown',e=>{if(e.target.closest('a,button'))return;if(e.pointerType==='mouse'){dragStart=e.clientX;scrollStart=grid.scrollLeft;moved=false;grid.classList.add('dragging');}});
   window.addEventListener('pointermove',e=>{if(dragStart===null)return;const d=e.clientX-dragStart;if(Math.abs(d)>5)moved=true;grid.scrollLeft=scrollStart-d;});
@@ -655,7 +657,9 @@ if(repo.language)tags.append(tag(repo.language));for(const topic of (repo.topics
  const t=c.textContent.toLowerCase();
  const matches=kind==='all'||(kind==='games'&&/game|snake|zombie|quiz/.test(t))||(kind==='tools'&&/calculator|utility|tool/.test(t))||(kind==='ai'&&/teja|ollama|assistant|model/.test(t))||(kind==='web'&&/portfolio|website|web|library|parking/.test(t));
  c.classList.toggle('filter-hidden',!matches)
- });}
+ });
+ document.dispatchEvent(new Event('portfolio-project-filter-changed'));
+ }
  if(pf){pf.addEventListener('click',e=>{const btn=e.target.closest('[data-project]');if(!btn)return;
  pf.querySelectorAll('button').forEach(b=>{b.classList.toggle('selected',b===btn);b.setAttribute('aria-pressed',String(b===btn))});
  updateProjectFilter();}); const grid=document.getElementById('githubProjects');if(grid)new MutationObserver(updateProjectFilter).observe(grid,{childList:true});
