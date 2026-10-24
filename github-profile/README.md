@@ -39,68 +39,44 @@ I'm **Vivek Sahu**, a **B.Tech Information Technology student** who loves turnin
 <table>
 <tr>
 <td width="50%" valign="top">
-
-#### 🐺 [TEJA AI](https://github.com/viveksahu1974/TEJA-AI)
-A personal AI-assistant project with local Ollama support, voice features, chat history and a customizable Training Studio.
-
-**Stack:** Python · Ollama · JavaScript
-
-[Source Code](https://github.com/viveksahu1974/TEJA-AI) · [UI Preview](https://viveksahu1974.github.io/portfolio/teja-demo/)
-
+<h4>🐺 <a href="https://github.com/viveksahu1974/TEJA-AI">TEJA AI</a></h4>
+<p>A personal AI-assistant project with local Ollama support, voice features, chat history and a customizable Training Studio.</p>
+<p><strong>Stack:</strong> Python · Ollama · JavaScript</p>
+<p><a href="https://github.com/viveksahu1974/TEJA-AI">Source Code</a> · <a href="https://viveksahu1974.github.io/portfolio/teja-demo/">UI Preview</a></p>
 </td>
 <td width="50%" valign="top">
-
-#### 🛡️ [PromptShield AI](https://github.com/viveksahu1974/PromptShield-AI)
-An educational prompt-injection risk scanner and dashboard concept, built as a FastAPI/React proof of concept.
-
-**Stack:** Python · FastAPI · React · TypeScript
-
-[Source Code](https://github.com/viveksahu1974/PromptShield-AI) · [Rules-Only Demo](https://viveksahu1974.github.io/portfolio/promptshield-demo/)
-
+<h4>🛡️ <a href="https://github.com/viveksahu1974/PromptShield-AI">PromptShield AI</a></h4>
+<p>An educational prompt-injection risk scanner and dashboard concept, built as a FastAPI/React proof of concept.</p>
+<p><strong>Stack:</strong> Python · FastAPI · React · TypeScript</p>
+<p><a href="https://github.com/viveksahu1974/PromptShield-AI">Source Code</a> · <a href="https://viveksahu1974.github.io/portfolio/promptshield-demo/">Rules-Only Demo</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
-#### 🌌 [ORBITAL — Space Explorer](https://github.com/viveksahu1974/ORBITAL-Space-Explorer)
-Explore a stylized Solar System, Milky Way and Black Hole through an interactive browser experience.
-
-**Stack:** HTML · CSS · JavaScript · Canvas
-
-[Source Code](https://github.com/viveksahu1974/ORBITAL-Space-Explorer) · [Live Experience](https://viveksahu1974.github.io/portfolio/orbital/)
-
+<h4>🌌 <a href="https://github.com/viveksahu1974/ORBITAL-Space-Explorer">ORBITAL — Space Explorer</a></h4>
+<p>Explore a stylized Solar System, Milky Way and Black Hole through an interactive browser experience.</p>
+<p><strong>Stack:</strong> HTML · CSS · JavaScript · Canvas</p>
+<p><a href="https://github.com/viveksahu1974/ORBITAL-Space-Explorer">Source Code</a> · <a href="https://viveksahu1974.github.io/portfolio/orbital/">Live Experience</a></p>
 </td>
 <td width="50%" valign="top">
-
-#### 🧬 [FaceForge AI](https://github.com/viveksahu1974/FaceForge-AI)
-Local-first face-analysis toolkit, with detection, alignment, recognition and optional advanced model integrations.
-
-**Stack:** Python · PyTorch · OpenCV · Gradio
-
-[Source Code](https://github.com/viveksahu1974/FaceForge-AI) · [UI Walkthrough](https://viveksahu1974.github.io/portfolio/faceforge-preview/)
-
+<h4>🧬 <a href="https://github.com/viveksahu1974/FaceForge-AI">FaceForge AI</a></h4>
+<p>Local-first face-analysis toolkit, with detection, alignment, recognition and optional advanced model integrations.</p>
+<p><strong>Stack:</strong> Python · PyTorch · OpenCV · Gradio</p>
+<p><a href="https://github.com/viveksahu1974/FaceForge-AI">Source Code</a> · <a href="https://viveksahu1974.github.io/portfolio/faceforge-preview/">UI Walkthrough</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
-#### 🎨 [React Interface Design System](https://github.com/viveksahu1974/Interface-Design-System-React.js-Project)
-A responsive UI component library and interactive design playground created as an internship demonstration.
-
-**Stack:** React · Vite · JavaScript · CSS
-
-[Source Code](https://github.com/viveksahu1974/Interface-Design-System-React.js-Project) · [Project Demo](https://viveksahu1974.github.io/Interface-Design-System-React.js-Project/)
-
+<h4>🎨 <a href="https://github.com/viveksahu1974/Interface-Design-System-React.js-Project">React Interface Design System</a></h4>
+<p>A responsive UI component library and interactive design playground created as an internship demonstration.</p>
+<p><strong>Stack:</strong> React · Vite · JavaScript · CSS</p>
+<p><a href="https://github.com/viveksahu1974/Interface-Design-System-React.js-Project">Source Code</a> · <a href="https://viveksahu1974.github.io/Interface-Design-System-React.js-Project/">Project Demo</a></p>
 </td>
 <td width="50%" valign="top">
-
-#### 🎮 [ONE ISLAND. ONE SURVIVOR.](https://github.com/viveksahu1974/ONE-ISLAND.-ONE-SURVIVOR)
-An original top-down browser survival game with three difficulty modes, maps, bots and a playable tank.
-
-**Stack:** JavaScript · HTML · CSS
-
-[Source Code](https://github.com/viveksahu1974/ONE-ISLAND.-ONE-SURVIVOR) · [Play the Game](https://viveksahu1974.github.io/portfolio/one-island/)
-
+<h4>🎮 <a href="https://github.com/viveksahu1974/ONE-ISLAND.-ONE-SURVIVOR">ONE ISLAND. ONE SURVIVOR.</a></h4>
+<p>An original top-down browser survival game with three difficulty modes, maps, bots and a playable tank.</p>
+<p><strong>Stack:</strong> JavaScript · HTML · CSS</p>
+<p><a href="https://github.com/viveksahu1974/ONE-ISLAND.-ONE-SURVIVOR">Source Code</a> · <a href="https://viveksahu1974.github.io/portfolio/one-island/">Play the Game</a></p>
 </td>
 </tr>
 </table>
