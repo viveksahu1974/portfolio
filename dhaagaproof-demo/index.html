@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#081c1b" />
+  <meta name="description" content="Interactive DhaagaProof AI SHG order, fair allocation and wage-ledger simulation by Vivek Sahu. Original Python backend and SQLite are not hosted." />
   <title>DhaagaProof AI | Fair work. Proven pay.</title>
   <link rel="stylesheet" href="./style.css" />
-  <script src="./demo.js" defer></script>
+  <script src="./mock-api.js"></script><script src="./app.js" defer></script>
 </head>
 <body>
   <div class="app-shell">
@@ -28,7 +29,7 @@
     <main class="main-area">
       <header class="topbar">
         <div><span class="breadcrumbs">WORKSPACE / <span id="crumb">OVERVIEW</span></span><h1 id="page-title">The work, made visible.</h1><p id="page-subtitle">A calmer way to manage production, promises and pay.</p></div>
-        <div class="top-actions"><span class="pill-status"><span class="dot-green"></span> BROWSER LIVE DEMO</span><a class="icon-btn" href="#" id="export-demo-csv" download="DhaagaProof-ledger.csv" title="Export CSV" aria-label="Download CSV">↓</a><button class="primary-btn" id="new-order-top">＋ New order</button></div>
+        <div class="top-actions"><span class="pill-status"><span class="dot-green"></span> INTERACTIVE BROWSER DEMO</span><a class="icon-btn" href="#" id="export-demo-csv" download="DhaagaProof-ledger.csv" title="Export CSV" aria-label="Download CSV">↓</a><button class="primary-btn" id="new-order-top">＋ New order</button></div>
       </header>
       <div class="demo-disclaimer"><span>ⓘ</span> BROWSER DEMO: fictional SHG members, example orders, local in-memory calculations and simulated human approvals. Nothing is saved to a database; no money or messages are sent. <a href="../#projects" style="text-decoration:underline;font-weight:800;margin-left:8px">← Portfolio</a> · <a href="https://github.com/viveksahu1974/Dhaaga-Proof-AI" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;font-weight:800">Original Python source ↗</a></div>
       <section class="view visible" id="view-overview"><div class="loading">Preparing example SHG data…</div></section>
