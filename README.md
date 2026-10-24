@@ -1,5 +1,12 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
+## DhaagaProof AI — new project showcase
+
+- **[DhaagaProof AI — Fair Work, Proven Pay](https://github.com/viveksahu1974/Dhaaga-Proof-AI)** — [interactive browser demo](https://viveksahu1974.github.io/portfolio/dhaagaproof-demo/) hosted on GitHub Pages.
+- Tech4Bharat 2026 Agentic AI-track prototype for women's self-help groups: quote-before-commit, consent and capacity-aware allocations, quality-accepted units, sample fair-wage ledger, and approval-gated agent suggestions.
+- The browser demo reuses the actual project's visual dashboard and mirrors the main transparent Python calculations in JavaScript for fictional session-only data. **The backend, SQLite database, actual payments, external messaging and local Ollama are NOT hosted.**
+- Featured gallery includes original project illustration, GitHub source, an interactive demo shortcut, and a GitHub Auto-Sync mapping.
+
 ## Latest project showcase (23 October 2026)
 
 - **[Interface Design System — React.js](https://github.com/viveksahu1974/Interface-Design-System-React.js-Project)** — [deployed React/Vite live app](https://viveksahu1974.github.io/Interface-Design-System-React.js-Project/). The project's GitHub Pages workflow succeeded on 23 October 2026.
