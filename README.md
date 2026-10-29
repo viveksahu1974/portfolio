@@ -1,5 +1,12 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
+## Portfolio Projects section refreshed (29 October 2026)
+
+- **[InternConnect — Internship & Project Management Portal](https://github.com/viveksahu1974/InternConnect-Full-Stack-Internship-Project-Management-Portal)** is now a featured portfolio project, with an original **illustrated concept thumbnail**, accurate technology tags, and a GitHub source-code link. Built with React, Node.js/Express, Sequelize, SQLite and JWT auth. Student, mentor and admin workflows include applications, internship milestones, task submissions, review feedback and analytics. **No publicly hosted full-stack demo is configured or claimed**; the project needs its Node.js API and database to run.
+- **[Modern Calculator](https://github.com/viveksahu1974/project---3)** now points to its [GitHub Pages live demo](https://viveksahu1974.github.io/project---3/) rather than the older Vercel URL. The GitHub Pages deployment workflow completed successfully.
+- The featured gallery and GitHub Auto-Sync metadata both include InternConnect, so the featured card remains accurate after a refresh.
+
+
 ## DhaagaProof AI — new project showcase
 
 - **[DhaagaProof AI — Fair Work, Proven Pay](https://github.com/viveksahu1974/Dhaaga-Proof-AI)** — [interactive browser demo](https://viveksahu1974.github.io/portfolio/dhaagaproof-demo/) hosted on GitHub Pages.
@@ -20,7 +27,7 @@ An original responsive developer portfolio inspired by futuristic black-and-cyan
 ## Features
 - Neon cyan night mode and Matrix-green hacker day mode with cursor parallax, glowing trails and floating particles.
 - Google-inspired search panel answers common questions **locally from Vivek's own portfolio and official GitHub/LinkedIn identity**. External Google is a separately labeled optional link scoped with the distinct GitHub username `viveksahu1974`. The panel is **not** an official Google product and cannot control Google AI answers. This avoids misleading on-site results for unrelated people also named Vivek Sahu.
-- Five featured project **illustrations** in `assets/`, each clearly marked *illustrated preview*, not genuine screenshots.
+- Original project-specific **illustrations** in `assets/` are illustrative concepts, not genuine application screenshots.
 - Featured project GitHub source and demo links. TEJA AI links to a **sample UI preview** in `teja-demo/`; full AI inference needs a properly configured backend.
 - Public GitHub repository Auto-Sync and featured project carousel; incomplete repositories listed by name.
 - Separate internships, academic history, skills and contact.
