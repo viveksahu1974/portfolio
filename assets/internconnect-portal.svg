@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-label="Illustrated concept of the InternConnect student, mentor and administrator dashboards">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061225"/><stop offset=".62" stop-color="#092d43"/><stop offset="1" stop-color="#121c45"/></linearGradient>
+ <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#36e8d7"/><stop offset="1" stop-color="#6b9dff"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#031020" flood-opacity=".6"/></filter>
+</defs>
+<rect width="1200" height="660" fill="url(#bg)"/>
+<g stroke="#16bbdf" opacity=".10"><path d="M40 100H1160M40 200H1160M40 300H1160M40 400H1160M40 500H1160M40 600H1160M100 35V625M300 35V625M500 35V625M700 35V625M900 35V625M1100 35V625"/></g>
+<rect x="34" y="32" width="1132" height="596" rx="27" fill="#081a31" stroke="#47d9ee" stroke-width="2" stroke-opacity=".8" filter="url(#shadow)"/>
+<rect x="35" y="34" width="1130" height="87" rx="26" fill="#0a2640"/>
+<circle cx="78" cy="78" r="11" fill="#5df5d8"/><circle cx="108" cy="78" r="11" fill="#4b8fff"/><circle cx="138" cy="78" r="11" fill="#b38bff"/>
+<text x="177" y="88" fill="#edfdff" font-family="Arial,sans-serif" font-size="35" font-weight="bold">InternConnect</text>
+<rect x="891" y="57" width="240" height="42" rx="21" fill="#163b59" stroke="#35c9e9"/>
+<text x="1011" y="84" text-anchor="middle" font-family="Arial,sans-serif" fill="#93f8e5" font-weight="bold" font-size="19">FULL-STACK PORTAL</text>
+<rect x="58" y="145" width="250" height="451" rx="18" fill="#0c2b46" stroke="#24617d"/>
+<text x="86" y="187" fill="#93e8f5" font-family="Arial,sans-serif" font-size="19" font-weight="bold">ROLE DASHBOARDS</text>
+<rect x="78" y="214" width="207" height="57" rx="12" fill="#155465" stroke="#4ce3e4"/>
+<text x="103" y="251" fill="#efffff" font-family="Arial,sans-serif" font-size="23" font-weight="bold">01  Student</text>
+<rect x="78" y="287" width="207" height="57" rx="12" fill="#122f4c" stroke="#39718a"/>
+<text x="103" y="324" fill="#cdeafd" font-family="Arial,sans-serif" font-size="23" font-weight="bold">02  Mentor</text>
+<rect x="78" y="360" width="207" height="57" rx="12" fill="#122f4c" stroke="#39718a"/>
+<text x="103" y="397" fill="#cdeafd" font-family="Arial,sans-serif" font-size="23" font-weight="bold">03  Admin</text>
+<path d="M107 472h148M107 502h116M107 532h137" stroke="#459bb3" stroke-width="12" stroke-linecap="round" opacity=".55"/>
+<rect x="333" y="145" width="803" height="451" rx="19" fill="#0b223b" stroke="#24617d"/>
+<text x="365" y="191" fill="#e7fbff" font-family="Arial,sans-serif" font-size="31" font-weight="bold">Internship overview</text>
+<text x="366" y="220" fill="#82bbd8" font-family="Arial,sans-serif" font-size="18">Projects • Applications • Milestones • Reviews</text>
+<rect x="364" y="247" width="229" height="100" rx="15" fill="#102e4a" stroke="#2e9db7"/>
+<text x="385" y="280" font-family="Arial,sans-serif" fill="#a3d6e4" font-size="18">Available projects</text>
+<text x="385" y="323" font-family="Arial,sans-serif" fill="#54f1d8" font-size="44" font-weight="bold">24</text>
+<rect x="615" y="247" width="229" height="100" rx="15" fill="#102e4a" stroke="#2e9db7"/>
+<text x="635" y="280" font-family="Arial,sans-serif" fill="#a3d6e4" font-size="18">My applications</text>
+<text x="635" y="323" font-family="Arial,sans-serif" fill="#7ac6ff" font-size="44" font-weight="bold">08</text>
+<rect x="866" y="247" width="239" height="100" rx="15" fill="#102e4a" stroke="#2e9db7"/>
+<text x="887" y="280" font-family="Arial,sans-serif" fill="#a3d6e4" font-size="18">Task progress</text>
+<text x="887" y="323" font-family="Arial,sans-serif" fill="#ad9bff" font-size="44" font-weight="bold">75%</text>
+<rect x="364" y="369" width="480" height="192" rx="15" fill="#112f4a" stroke="#2c6587"/>
+<text x="384" y="402" fill="#d3f9ff" font-family="Arial,sans-serif" font-size="20" font-weight="bold">Milestone roadmap</text>
+<rect x="385" y="431" width="432" height="15" rx="8" fill="#27516c"/>
+<rect x="385" y="431" width="370" height="15" rx="8" fill="url(#accent)"/>
+<rect x="385" y="466" width="432" height="15" rx="8" fill="#27516c"/>
+<rect x="385" y="466" width="306" height="15" rx="8" fill="url(#accent)"/>
+<rect x="385" y="501" width="432" height="15" rx="8" fill="#27516c"/>
+<rect x="385" y="501" width="195" height="15" rx="8" fill="url(#accent)"/>
+<rect x="866" y="369" width="239" height="192" rx="15" fill="#112f4a" stroke="#2c6587"/>
+<text x="888" y="401" fill="#d3f9ff" font-family="Arial,sans-serif" font-size="18" font-weight="bold">Review status</text>
+<rect x="889" y="423" width="190" height="39" rx="10" fill="#165852"/>
+<text x="984" y="449" text-anchor="middle" fill="#b8ffe7" font-family="Arial,sans-serif" font-size="18">Approved</text>
+<rect x="889" y="479" width="190" height="39" rx="10" fill="#304c68"/>
+<text x="984" y="505" text-anchor="middle" fill="#deefff" font-family="Arial,sans-serif" font-size="18">In review</text>
+<text x="75" y="615" fill="#8cb6d3" font-family="Arial,sans-serif" font-size="16">ILLUSTRATED UI CONCEPT • SAMPLE NUMBERS • NOT A LIVE APPLICATION SCREENSHOT</text>
+</svg>
