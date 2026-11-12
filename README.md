@@ -1,8 +1,16 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
+## Projects and live browser demos updated (12 November 2026)
+
+- **[LifePilot — AI Personal Life Assistant](https://github.com/viveksahu1974/AI-Personal-Life-Assistant)** is now the first featured card in the [portfolio gallery](https://viveksahu1974.github.io/portfolio/#projects). Its [interactive browser demo](https://viveksahu1974.github.io/portfolio/lifepilot-demo/) supports tasks, due-date reminders, expense categories, monthly budgets, progress indicators, and an offline rules assistant. Demo entries are fictional at first and then stored in the visitor's own browser using localStorage.
+- **[InternConnect — Internship & Project Management Portal](https://github.com/viveksahu1974/InternConnect-Full-Stack-Internship-Project-Management-Portal)** now has an [interactive UI demo](https://viveksahu1974.github.io/portfolio/internconnect-demo/) showcasing project discovery, simulated applications, milestone submissions, mentor review decisions and analytics. Role switching is a UI walkthrough, not production authentication. Its full-stack source is unchanged.
+- Both demos are **real interactive, static browser previews**, *not* hosted React/Python or React/Node production backends. They do not connect to a remote database, AI inference service, email, or genuine internship accounts. Run the original repositories locally for their actual backend features.
+- The GitHub Auto-Sync project gallery recognizes both projects, retains their demo links when cards refresh, and labels them as browser previews. The featured static fallback cards work when the GitHub API is unavailable, and the gallery remains responsive on mobile.
+- The original **LifePilot SVG cover** is an illustration, **not a screenshot**.
+
 ## Portfolio Projects section refreshed (29 October 2026)
 
-- **[InternConnect — Internship & Project Management Portal](https://github.com/viveksahu1974/InternConnect-Full-Stack-Internship-Project-Management-Portal)** is now a featured portfolio project, with an original **illustrated concept thumbnail**, accurate technology tags, and a GitHub source-code link. Built with React, Node.js/Express, Sequelize, SQLite and JWT auth. Student, mentor and admin workflows include applications, internship milestones, task submissions, review feedback and analytics. **No publicly hosted full-stack demo is configured or claimed**; the project needs its Node.js API and database to run.
+- **[InternConnect — Internship & Project Management Portal](https://github.com/viveksahu1974/InternConnect-Full-Stack-Internship-Project-Management-Portal)** is now a featured portfolio project, with an original **illustrated concept thumbnail**, accurate technology tags, and a GitHub source-code link. Built with React, Node.js/Express, Sequelize, SQLite and JWT auth. Student, mentor and admin workflows include applications, internship milestones, task submissions, review feedback and analytics. **No production full-stack deployment is configured or claimed**; a separate static interactive UI preview is now available. The real project still needs its Node.js API and database to run.
 - **[Modern Calculator](https://github.com/viveksahu1974/project---3)** now points to its [GitHub Pages live demo](https://viveksahu1974.github.io/project---3/) rather than the older Vercel URL. The GitHub Pages deployment workflow completed successfully.
 - The featured gallery and GitHub Auto-Sync metadata both include InternConnect, so the featured card remains accurate after a refresh.
 
