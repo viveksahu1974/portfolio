@@ -1,5 +1,12 @@
 # Vivek Sahu — Neon Cyber Portfolio
 
+## Portfolio refreshed — 12 November 2026 (latest)
+
+- **[Pocket Agent — Self-Hosted Personal AI](https://github.com/viveksahu1974/Pocket-Agent-Your-Personal-AI-Assistant)** is now the first featured project, with an original illustration and [live interactive browser walkthrough](https://viveksahu1974.github.io/portfolio/pocket-agent-demo/). The preview supports UI model selection and locally simulated `/help`, `/model`, `/remember`, `/memories`, `/forget`, `/task`, `/jobs`, `/steps`, and `/search` command handling. Demo entries stay in the visitor's browser. **No real AI model, job worker, chat connector or web search is running on GitHub Pages.**
+- The underlying Pocket Agent is a Python 3.11+ self-hosted service that can be configured with OpenAI, Anthropic, or Ollama and optional Telegram, Discord, Slack, or authorized WeChat bridge integrations. Read its repository README to set up and run real integrations locally. Personal WeChat login is **not** provided automatically.
+- The portfolio now features **15 curated projects** (including Pocket Agent, LifePilot and InternConnect). Their code buttons link to their own public GitHub repositories. The [Projects gallery](https://viveksahu1974.github.io/portfolio/#projects) includes a responsive **View All Projects / Gallery View** toggle, saved per browser, for easier access on mobile and desktop.
+- GitHub Auto-Sync keeps Pocket Agent's title, illustrated cover and browser preview link on dynamic refresh. Preview links are never presented as production hosted AI backends.
+
 ## Projects and live browser demos updated (12 November 2026)
 
 - **[LifePilot — AI Personal Life Assistant](https://github.com/viveksahu1974/AI-Personal-Life-Assistant)** is now the first featured card in the [portfolio gallery](https://viveksahu1974.github.io/portfolio/#projects). Its [interactive browser demo](https://viveksahu1974.github.io/portfolio/lifepilot-demo/) supports tasks, due-date reminders, expense categories, monthly budgets, progress indicators, and an offline rules assistant. Demo entries are fictional at first and then stored in the visitor's own browser using localStorage.
